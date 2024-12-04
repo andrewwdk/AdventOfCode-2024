@@ -1,10 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace AdventOfCode2024.Helpers
+﻿namespace AdventOfCode2024.Helpers
 {
     public static class FileHelper
     {
@@ -13,6 +7,13 @@ namespace AdventOfCode2024.Helpers
             var filePath = $"C:\\AZ\\Projects\\Advent of Code 2024\\AdventOfCode2024\\Inputs\\{inputFileName}";
             var lines = File.ReadAllLines(filePath).ToList();
             return lines;
+        }
+
+        public static string ReadText(string inputFileName)
+        {
+            var filePath = $"C:\\AZ\\Projects\\Advent of Code 2024\\AdventOfCode2024\\Inputs\\{inputFileName}";
+            var text = File.ReadAllText(filePath);
+            return text;
         }
     }
 }
