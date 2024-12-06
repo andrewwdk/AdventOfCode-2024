@@ -12,6 +12,14 @@
 //task3.Part1();
 //task3.Part2();
 
-var task4 = new Task4();
-task4.Part1();
-task4.Part2();
+//var task4 = new Task4();
+//task4.Part1();
+//task4.Part2();
+
+//var task5 = new Task5();
+//task5.Part1();
+//task5.Part2();
+
+var task6 = new Task6();
+task6.Part1();
+task6.Part2();
