@@ -108,11 +108,11 @@ namespace AdventOfCode2024.Tasks
             {
                 for (int j = 0; j < _positions[0].Count; j++)
                 {
-                    //Console.Write(_positions[i][j].IsVisited ? "X" : ".");
+                    Console.Write(_positions[i][j].IsVisited ? "X" : ".");
                     if (_positions[i][j].IsVisited)
                         count++;
                 }
-               // Console.Write("\n");
+                Console.Write("\n");
             }
 
             OutputHelper.ShowResult(6, 1, count);
