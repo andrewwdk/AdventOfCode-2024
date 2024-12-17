@@ -12,7 +12,6 @@ namespace AdventOfCode2024.Tasks
 
             foreach (var line in lines)
                 _operations.Add(new Operation(line));
-
         }
 
         public void Part1()
