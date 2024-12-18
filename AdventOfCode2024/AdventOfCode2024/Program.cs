@@ -32,6 +32,10 @@
 //task8.Part1();
 //task8.Part2();
 
-var task9 = new Task9();
-task9.Part1();
-task9.Part2();
+//var task9 = new Task9();
+//task9.Part1();
+//task9.Part2();
+
+var task10 = new Task10();
+task10.Part1();
+task10.Part2();
