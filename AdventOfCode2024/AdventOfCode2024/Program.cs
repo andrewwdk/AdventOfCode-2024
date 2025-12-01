@@ -36,6 +36,10 @@
 //task9.Part1();
 //task9.Part2();
 
-var task10 = new Task10();
-task10.Part1();
-task10.Part2();
+//var task10 = new Task10();
+//task10.Part1();
+//task10.Part2();
+
+var task1 = new AdventOfCode2024.Tasks_2025.Task1();
+task1.Part1();
+task1.Part2();
