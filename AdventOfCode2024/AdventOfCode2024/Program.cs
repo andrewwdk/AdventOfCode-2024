@@ -40,6 +40,14 @@
 //task10.Part1();
 //task10.Part2();
 
-var task1 = new AdventOfCode2024.Tasks_2025.Task1();
-task1.Part1();
-task1.Part2();
+//var task1 = new AdventOfCode2024.Tasks_2025.Task1();
+//task1.Part1();
+//task1.Part2();
+
+//var task2 = new AdventOfCode2024.Tasks_2025.Task2();
+//task2.Part1();
+//task2.Part2();
+
+var task3 = new AdventOfCode2024.Tasks_2025.Task3();
+task3.Part1();
+task3.Part2();
