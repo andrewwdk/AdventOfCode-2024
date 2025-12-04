@@ -48,6 +48,6 @@
 //task2.Part1();
 //task2.Part2();
 
-var task3 = new AdventOfCode2024.Tasks_2025.Task3();
-task3.Part1();
-task3.Part2();
+var task4 = new AdventOfCode2024.Tasks_2025.Task4();
+task4.Part1();
+task4.Part2();
