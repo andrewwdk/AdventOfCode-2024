@@ -12,7 +12,7 @@ namespace AdventOfCode2024.Tasks_2025
 
             foreach (var line in lines)
             {
-                firstList.AddRange(line.Split(',', '-').Where(x => x != string.Empty).Select(long.Parse)); ;
+                firstList.AddRange(line.Split(',', '-').Where(x => x != string.Empty).Select(long.Parse));
             }
         }
 
