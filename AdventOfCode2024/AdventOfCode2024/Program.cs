@@ -70,3 +70,6 @@ test.Run();
 test.Run2();
 test.Run3();
 test.Run4();
+test.Run5();
+test.Run6();
+test.Run7();

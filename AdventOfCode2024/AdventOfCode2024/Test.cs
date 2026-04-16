@@ -2,6 +2,8 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
+using System.Reflection.PortableExecutable;
+using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
@@ -47,6 +49,26 @@ namespace AdventOfCode2024
                 var cmd = new SqlCommand(query, conn);
                 cmd.ExecuteReader();
             }
+        }
+
+        public void Run5()
+        {
+            string data = Environment.GetEnvironmentVariable("DATA");
+            var bytes = Convert.FromBase64String(data);
+
+            var formatter = new BinaryFormatter(); // flagged as unsafe
+            var obj = formatter.Deserialize(new MemoryStream(bytes));
+        }
+
+        public void Run6()
+        {
+            string user = Environment.GetEnvironmentVariable("USER");
+
+            string filter = "(cn=" + user + ")"; // unsafe concatenation
+
+            var entry = new DirectoryEntry();
+            var searcher = new DirectorySearcher(entry, filter);
+            searcher.FindOne();
         }
     }
 }
