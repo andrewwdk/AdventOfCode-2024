@@ -9,6 +9,8 @@ namespace AdventOfCode2024
 {
     internal class Test
     {
+        private const string ApiKey = "12345-ABCDE-SECRET-KEY";
+
         public void Run()
         {
             string cmd = Environment.GetEnvironmentVariable("CMD");
