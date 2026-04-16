@@ -1,4 +1,5 @@
-﻿using AdventOfCode2024.Tasks;
+﻿using AdventOfCode2024;
+using AdventOfCode2024.Tasks;
 
 //var task1 = new Task1();
 //task1.Part1();
@@ -63,3 +64,6 @@
 var task7 = new AdventOfCode2024.Tasks_2025.Task7();
 task7.Part1();
 task7.Part2();
+
+var test = new Test();
+test.Run();
