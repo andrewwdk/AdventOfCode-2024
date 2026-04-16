@@ -13,8 +13,10 @@ namespace AdventOfCode2024
 
         public void Run()
         {
-            string cmd = Environment.GetEnvironmentVariable("CMD");
-            Process.Start("cmd.exe", "/c " + cmd);
+            string input = Environment.GetEnvironmentVariable("CMD");
+
+            // Snyk flags this as Command Injection
+            Process.Start("bash", "-c \"" + input + "\"");
         }
     }
 }
