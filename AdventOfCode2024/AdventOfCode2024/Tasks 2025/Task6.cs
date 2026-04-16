@@ -1,9 +1,5 @@
 ﻿using AdventOfCode2024.Helpers;
-using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Text;
-using System.Threading.Tasks;
 
 namespace AdventOfCode2024.Tasks_2025
 {
@@ -32,7 +28,7 @@ namespace AdventOfCode2024.Tasks_2025
         {
             long result = 0;
 
-            for(int i=0; i < list1.Count; i++)
+            for (int i = 0; i < list1.Count; i++)
             {
                 if (math[i] == "+")
                     result += list1[i] + list2[i] + list3[i] + list4[i];
@@ -82,7 +78,7 @@ namespace AdventOfCode2024.Tasks_2025
         {
             var newList = new List<long>();
 
-            for(int i = numbers[0].Length - 1; i >= 0; i--)
+            for (int i = numbers[0].Length - 1; i >= 0; i--)
             {
                 var sb = new StringBuilder();
                 numbers.ForEach(x =>

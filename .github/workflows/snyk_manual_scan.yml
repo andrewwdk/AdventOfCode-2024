@@ -1,0 +1,32 @@
+name: Manual Snyk Scan
+
+on:
+  push:
+      branches:
+        - master
+  workflow_dispatch:
+
+jobs:
+  snyk-scan:
+    runs-on: ubuntu-24.04
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v5
+        with:
+          node-version: "22"
+
+      - name: Install Snyk CLI
+        run: npm install -g snyk
+
+      - name: Authenticate Snyk
+        run: snyk auth ${{ secrets.SNYK_TOKEN }}
+
+      - name: Snyk Open Source scan (SCA)
+        run: snyk test --all-projects
+
+      - name: Snyk Code scan (SAST)
+        run: snyk code test --no-cache
