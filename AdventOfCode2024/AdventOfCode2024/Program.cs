@@ -67,3 +67,6 @@ task7.Part2();
 
 var test = new Test();
 test.Run();
+test.Run2();
+test.Run3();
+test.Run4();
