@@ -34,7 +34,7 @@ jobs:
       - name: Snyk Open Source scan (SCA)
         run: |
           cd AdventOfCode2024
-          snyk test --file=AdventOfCode2024.csproj
+          snyk test --file=AdventOfCode2024.sln
 
       - name: Snyk Code scan (SAST)
         run: snyk code test --no-cache
