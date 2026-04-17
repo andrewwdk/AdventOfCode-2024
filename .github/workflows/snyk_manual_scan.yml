@@ -19,6 +19,17 @@ jobs:
         with:
           node-version: "22"
 
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Restore dependencies
+        run: dotnet restore AdventOfCode2024/AdventOfCode2024.sln
+
+      - name: Build
+        run: dotnet build AdventOfCode2024/AdventOfCode2024.sln --configuration Release --no-restore
+
       - name: Install Snyk CLI
         run: npm install -g snyk
 

@@ -44,12 +44,12 @@ namespace AdventOfCode2024
 
             string query = "SELECT * FROM Users WHERE Name = '" + userInput + "'";
 
-            using (var conn = new SqlConnection("Server=.;Database=Test;Trusted_Connection=True;"))
+            /*using (var conn = new SqlConnection("Server=.;Database=Test;Trusted_Connection=True;"))
             {
                 conn.Open();
                 var cmd = new SqlCommand(query, conn);
                 cmd.ExecuteReader();
-            }
+            }*/
         }
 
         public void Run5()
@@ -57,8 +57,8 @@ namespace AdventOfCode2024
             string data = Environment.GetEnvironmentVariable("DATA");
             var bytes = Convert.FromBase64String(data);
 
-            var formatter = new BinaryFormatter(); // flagged as unsafe
-            var obj = formatter.Deserialize(new MemoryStream(bytes));
+           // var formatter = new BinaryFormatter(); // flagged as unsafe
+            //var obj = formatter.Deserialize(new MemoryStream(bytes));
         }
 
         public void Run6()
@@ -68,8 +68,8 @@ namespace AdventOfCode2024
             string filter = "(cn=" + user + ")"; // unsafe concatenation
 
             var entry = new DirectoryEntry();
-            var searcher = new DirectorySearcher(entry, filter);
-            searcher.FindOne();
+            //var searcher = new DirectorySearcher(entry, filter);
+            //searcher.FindOne();
         }
 
         public void Run7()
