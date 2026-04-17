@@ -7,6 +7,7 @@ using System.Runtime.Serialization.Formatters.Binary;
 using System.Security.Cryptography;
 using System.Text;
 using System.Threading.Tasks;
+using System.Xml;
 
 namespace AdventOfCode2024
 {
@@ -69,6 +70,17 @@ namespace AdventOfCode2024
             var entry = new DirectoryEntry();
             var searcher = new DirectorySearcher(entry, filter);
             searcher.FindOne();
+        }
+
+        public void Run7()
+        {
+            string xml = Environment.GetEnvironmentVariable("XML");
+
+            var settings = new XmlReaderSettings();
+            settings.DtdProcessing = DtdProcessing.Parse; // unsafe
+
+            using var reader = XmlReader.Create(new StringReader(xml), settings);
+            while (reader.Read()) { }
         }
     }
 }

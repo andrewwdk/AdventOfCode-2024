@@ -7,4 +7,8 @@
     <Nullable>enable</Nullable>
   </PropertyGroup>
 
+  <ItemGroup>
+    <PackageReference Include="Magick.NET-Q16-x86" Version="14.11.1" />
+  </ItemGroup>
+
 </Project>
