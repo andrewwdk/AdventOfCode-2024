@@ -25,6 +25,12 @@ jobs:
       - name: Authenticate Snyk
         run: snyk auth ${{ secrets.SNYK_TOKEN }}
 
+      - name: Debug — show current directory
+        run: pwd
+
+      - name: Debug — list files
+        run: ls -la
+
       - name: Snyk Open Source scan (SCA)
         run: snyk test --file=AdventOfCode-2024/AdventOfCode2024/AdventOfCode2024.sln
 
