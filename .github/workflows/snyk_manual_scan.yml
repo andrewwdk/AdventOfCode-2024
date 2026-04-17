@@ -25,8 +25,8 @@ jobs:
       - name: Authenticate Snyk
         run: snyk auth ${{ secrets.SNYK_TOKEN }}
 
-      # - name: Snyk Open Source scan (SCA)
-      #   run: snyk test --all-projects
+      - name: Snyk Open Source scan (SCA)
+        run: snyk test --all-projects
 
       - name: Snyk Code scan (SAST)
         run: snyk code test --no-cache
